@@ -1,0 +1,104 @@
+.sticky-page {
+	padding-top: 133px;
+}
+body {
+	padding-right: 0 !important;
+	&.modal-open {
+		padding-right: 0 !important;
+		overflow: auto;
+	}
+}
+.header {
+	* {color: #0a1324;}
+	padding: 25px 0;
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	z-index: 99;
+	background:#fff;
+	.nav.nav-tabs {
+		border: none;
+		padding:0;
+		li {
+			float:none;
+			padding:0;
+			a {
+				padding: 0;
+				border-bottom: 3px solid transparent;
+				margin:0;
+				border-top:none;
+					border-left:none;
+					border-right:none;
+				&:hover,&:focus,&:active {
+					border-top:none;
+					border-left:none;
+					border-right:none;
+					background: 0 0;
+				}
+			}
+			&.active {
+				a {
+					border-top:none;
+					border-left:none;
+					border-right:none;
+					border-color: @orange;
+				}
+			}
+		}
+	}
+	nav > ul {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+		margin:0 -5%;
+		padding:0;
+		a {
+			font-size: 14px;
+			.lato(700,normal);
+			text-transform: uppercase;
+			border-bottom: 3px solid transparent;
+			display: inline-block;
+			padding-bottom: 0px;
+			&:hover,&:focus {
+				text-decoration: none;
+				color:#0a1324;
+				border-color: @orange;
+			}
+		}
+		li.active {
+			a {
+				border-color: @orange;
+			}
+		}
+	}
+	.row {
+		display: flex;
+		align-items: center;
+	}
+	.contacts {
+		padding:0;
+		&>div {
+			&:nth-child(1) {
+				a {
+					font-size: 23px;
+					margin-bottom: 5px;
+					display: inline-block;
+					.lato(700,normal);
+				}
+			}
+			&:nth-child(2) {
+				a {
+					i {
+						margin-right: 10px;
+						margin-bottom: 2px;
+					}
+					text-transform: uppercase;
+					font-size: 18px;
+					.lato(700,normal);
+					
+				}
+			}
+		}
+	}
+}
